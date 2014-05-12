@@ -31,6 +31,7 @@ in *html template*:
 
 And you must have the collection i18n with the next schema:
 
+```coffee
 schema:
     language:
         type: String
@@ -40,6 +41,7 @@ schema:
         type: String
     value:
         type: String
+```
 
 An example:
 
@@ -67,10 +69,14 @@ other example:
 
 In value you can have more complex strings like:
 
+```
 "There are {{count}} {{fruit}} in the basket."
+```
 
 And use like:
 
+```html
 {{ i18n 'THERE_ARE_FRUITS' count=total_fruits fruit=fruit }}
+```
 
 where fruit is passed here from the data section of iron-router.
