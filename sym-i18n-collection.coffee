@@ -1,1 +1,1 @@
-@i18n = new Meteor.Collection "i18n"
+i18n = new Meteor.Collection "i18n"

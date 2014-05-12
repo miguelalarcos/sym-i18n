@@ -8,4 +8,5 @@ Package.on_use(function (api) {
     api.add_files('sym-i18n.coffee', 'client');
     api.add_files('sym-i18n-collection.coffee', ['server', 'client']);
     api.add_files('sym-i18n-publication.coffee', 'server');
+    api.export('i18n', ['client', 'server']);
 });
