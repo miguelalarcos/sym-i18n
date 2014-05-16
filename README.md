@@ -1,7 +1,7 @@
 A Symfony inspired i18n for Meteor
 ----------------------------------
 
-Provides a collection named *i18n* and a publication named *i18n* as well.
+Provides a collection named *i18n*, publication named *i18n* and a helper named *i18n* as well.
 
 Usage:
 
@@ -29,21 +29,7 @@ in *html template*:
 </template>
 ```
 
-And you must have the collection i18n with the next schema:
-
-```coffee
-schema:
-    language:
-        type: String
-    tag:
-        type: String
-    count:
-        type: String
-    value:
-        type: String
-```
-
-An example:
+An example of a document of *i18n* collection:
 
 ```javascript
 {

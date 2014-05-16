@@ -4,6 +4,7 @@ Package.describe({
 
 Package.on_use(function (api) {
     api.use(['coffeescript', 'templating'], ['client', 'server']);
+    api.use('collection2', ['server', 'client']);
 
     api.add_files('sym-i18n.coffee', 'client');
     api.add_files('sym-i18n-collection.coffee', ['server', 'client']);
