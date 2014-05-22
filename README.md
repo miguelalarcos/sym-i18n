@@ -5,7 +5,7 @@ Provides a collection named *i18n*, publication named *i18n* and a helper named 
 
 Usage:
 
-in *client/main.coffee*:
+in *client*:
 
 ```coffee
 Session.set 'i18n.language', 'en'  # you can use whatever name you want
@@ -66,3 +66,7 @@ And use like:
 ```
 
 where fruit is passed here from the data section of iron-router.
+
+Also check the [sym-i18n-ui](https://github.com/miguelalarcos/sym-i18n-ui) that is a minimalistic UI for introducing traductions and pluralizations. Note that you have to export the MONGO_URL to the app you want to traduce.
+
+I have another thing to say: ¡check my [meteor-boilerplate](https://github.com/miguelalarcos/meteor-boilerplate)!
