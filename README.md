@@ -1,7 +1,7 @@
 A Symfony inspired i18n for Meteor
 ----------------------------------
 
-Provides a collection named *i18n*, publication named *i18n* and a helper named *i18n* as well.
+Provides a collection named *i18n*, publication named *i18n* and a helper named *i18n* as well. Also provides a *ji18n* javascript function.
 
 Usage:
 
@@ -66,6 +66,11 @@ And use like:
 ```
 
 where fruit is passed here from the data section of iron-router.
+
+*ji18n* is used this way:
+```coffee
+text = ji18n('THERE_ARE_APPLES', {count:0})
+```
 
 Also check the [sym-i18n-ui](https://github.com/miguelalarcos/sym-i18n-ui) that is a minimalistic UI for introducing traductions and pluralizations. Note that you have to export the MONGO_URL to the app you want to traduce.
 

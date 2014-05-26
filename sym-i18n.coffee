@@ -2,15 +2,15 @@ sub = (txt, context) ->
     txt.replace /\{\{(.+?)\}\}/g, (whole, part) ->
         context[part.trim()]
 
-
-UI.registerHelper 'i18n', (tag, context) ->
-    c = context.hash
-    count = c.count
+ji18n = (tag, context) ->
+    if context is undefined
+        context = {}
+    count = context.count
 
     try
         if count is undefined
             t = i18n.findOne({tag: tag}).value
-            return sub(t,c)
+            return sub(t,context)
         else             
             ranges = (x.count for x in i18n.find({tag: tag}).fetch())
             flag = false
@@ -29,12 +29,14 @@ UI.registerHelper 'i18n', (tag, context) ->
                         break
             if flag
                 t =  i18n.findOne({tag: tag, count: r}).value
-                return sub(t, c)
+                return sub(t, context)
             else
                 'not found.'
     catch error
         console.log error
         'not found..'
+
+
+UI.registerHelper 'i18n', (tag, context) ->
+    ji18n tag, context.hash
     
-
-
