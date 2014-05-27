@@ -3,7 +3,7 @@
       "description": "A Symfony inspired i18n for Meteor.",
       "homepage": "https://github.com/miguelalarcos/sym-i18n",
       "author": "Miguel Ángel Alarcos <miguel.alarcos@gmail.com>",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "git": "https://github.com/miguelalarcos/sym-i18n.git",
       "packages": {
         "collection2":{}
