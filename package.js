@@ -1,5 +1,8 @@
 Package.describe({
-    summary: "A Symfony inspired i18n for Meteor."
+    name: 'miguelalarcos:sym-i18n',
+    summary: "A Symfony inspired i18n for Meteor.",
+    version: '0.1.1',
+    git: 'https://github.com/miguelalarcos/sym-i18n.git'
 });
 
 Package.on_use(function (api) {
@@ -13,3 +16,4 @@ Package.on_use(function (api) {
     api.export('i18n', ['client', 'server']);
     api.export('ji18n', ['client','server']);
 });
+
