@@ -6,6 +6,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+    api.versionsFrom('1.0.2.1');
     api.use(['coffeescript', 'templating'], ['client', 'server']);
     api.use('aldeed:collection2', ['server', 'client']);
 
