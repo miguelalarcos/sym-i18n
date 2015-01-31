@@ -1,10 +1,10 @@
 A Symfony inspired i18n for Meteor
-----------------------------------
+==================================
 
 Provides a collection named *i18n*, publication named *i18n* and a helper named *i18n* as well. Also provides a *ji18n* javascript function.
 
 Usage:
-
+------
 in *client*:
 
 ```coffee
