@@ -1,0 +1,17 @@
+<template name="mainLayout">
+    <div class="ui horizontal list">
+        <div class="item">
+            <div class="content">
+                <a href="{{pathFor 'admin'}}">Admin</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <a href="{{pathFor 'traductor'}}">Traductor</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        {{> yield}}
+    </div>
+</template>

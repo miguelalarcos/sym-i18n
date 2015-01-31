@@ -31,7 +31,7 @@ ji18n = (tag, context) ->
                 t =  i18n.findOne({tag: tag, count: r}).value
                 return sub(t, context)
             else
-                'not found.'
+                'not found'
     catch error
         console.log error
-        'not found..'
+        'not found'

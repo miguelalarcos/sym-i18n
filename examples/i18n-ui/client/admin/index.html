@@ -1,0 +1,42 @@
+<template name="admin">
+    <div class="first-column">
+        <div class="ui input">
+            Tag: <input type="text" id="tag_en">
+        </div>
+        <div class="ui input">
+            Value: <textarea rows="3" id="value_en"></textarea>
+        </div>
+        <div class="ui input">
+            Count: <input type="text" id="count_en">
+        </div>
+        <div>
+            <button class="ui button" id="save_en">Guardar</button>
+        </div>
+    </div>
+    <div class="second-column">
+        <table>
+            <th>Language</th>
+            <th>Tag</th>
+            <th>Count</th>
+            <th>Value</th>
+            <th>Status</th>
+            <th></th>
+            <th></th>
+            {{#each translations}}
+                <tr>
+                    <td>{{language}}</td>
+                    <td>{{tag}}</td>
+                    <td>{{count}}</td>
+                    <td>{{value}}</td>
+                    <td>{{status}}</td>
+                    <td><i _id={{_id}} class="approve check icon"></i></td>
+                    <td><i _id={{_id}} class="done reply icon"></i></td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</template>
+
+<template name="sorryAdmin">
+    <h3>sorry, you are not admin</h3>
+</template>

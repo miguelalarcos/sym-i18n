@@ -1,0 +1,42 @@
+<template name="traductor">
+    <div class="first-column">
+        {{#each saved}}
+            <div>{{language}}, {{tag}}, {{reference}}, {{count}}</div>
+            <div class="ui input">
+                <textarea rows="3" class="value-saved" _id="{{_id}}">{{value}}</textarea>
+            </div>
+        {{/each}}
+        <div>
+            <button class="ui button" id="done_translations">Guardar</button>
+        </div>
+        {{#each languages}}
+            {{#each items this}}
+                <div>{{language}}, {{tag}}, {{reference}}, {{count}}</div>
+                <div class="ui input">
+                    <textarea rows="3" class="value_translated" count="{{count}}" language="{{language}}" tag="{{tag}}"></textarea>
+                </div>
+            {{/each}}
+        {{/each}}
+        <div>
+            <button class="ui button" id="save_translations">Guardar</button>
+        </div>
+    </div>
+    <div class="second-column">
+        <table>
+            <th>Language</th>
+            <th>Tag</th>
+            <th>Count</th>
+            <th>Value</th>
+            <th></th>
+            {{#each done}}
+                <tr>
+                    <td>{{language}}</td>
+                    <td>{{tag}}</td>
+                    <td>{{count}}</td>
+                    <td>{{value}}</td>
+                    <td><i _id={{_id}} class="edit write icon"></i></td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</template>

@@ -1,0 +1,8 @@
+.first-column, .second-column {
+    float: left;
+    width: 50%;
+}
+
+.edit, .approve, .done {
+    cursor: pointer;
+}
