@@ -1,7 +1,7 @@
 A Symfony inspired i18n for Meteor
 ==================================
 
-Provides a collection named *i18n*, publication named *i18n* and a helper named *i18n* as well. Also provides a *ji18n* javascript function.
+Provides a collection named *i18n*, publication named *i18n* and a helper named *i18n* as well. Also provides a *ji18n* javascript function and a *i18n_map* function.
 
 Usage:
 ------
@@ -19,6 +19,18 @@ class @HomeController extends RouteController
     waitOn: -> Meteor.subscribe "i18n", Session.get('i18n.language')
     data: ->
         total_apples: Session.get "total_apples"
+```
+
+in *flow-router* you can use the url:
+
+```http://localhost:3000/admin-post/?lang=es```
+
+and:
+```coffee
+FlowRouter.route '/admin-post/',
+subscriptions: (params, queryParams) ->
+    lang = queryParams.lang or 'en'
+    this.register('i18n', Meteor.subscribe("i18n", lang))
 ```
 
 in *html template*:
@@ -72,4 +84,16 @@ where fruit is passed here from the data section of iron-router.
 text = ji18n('THERE_ARE_APPLES', {count:0})
 ```
 
+And here is an example on how to map languages:
 
+```coffee
+map =
+  es:
+    SAVE:
+      any: 'Guardar'
+  en:
+    SAVE:
+      any: 'Save'
+
+i18n_map(map)
+```

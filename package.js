@@ -1,7 +1,7 @@
 Package.describe({
     name: 'miguelalarcos:sym-i18n',
     summary: "A Symfony inspired i18n for Meteor.",
-    version: '0.2.0',
+    version: '0.2.1',
     git: 'https://github.com/miguelalarcos/sym-i18n.git'
 });
 
